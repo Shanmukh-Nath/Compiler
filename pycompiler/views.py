@@ -41,3 +41,7 @@ def runcode(request):
     #finally return and render index page and send codedata and output to show on page
 
     return render(request , 'index.html', {"code":codeareadata , "output":output})
+
+def save(request):
+    if request.method=='POST':
+        codeareadata=request.POST['codearea']
